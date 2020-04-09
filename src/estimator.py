@@ -74,8 +74,7 @@ def get_dollars_in_flight(data, output):
     pass
 
 
-def build_estimation_output(data):
-    # Assuming 'data' is a dictionary
+def estimation(data):
 
     output = {
         'data': data,
@@ -95,4 +94,4 @@ def build_estimation_output(data):
 
 
 def estimator(data):
-    return build_estimation_output(data)
+    return estimation(data)
