@@ -1,11 +1,26 @@
 from simplexml import dumps
 from flask import Flask, request, jsonify, g
+#from flask_restful import Resource, Api, reqparse
 from .estimator import estimator
 import time
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
+# api = Api(app)
 
+# Data = {
+#     region: {
+#         name: "Africa",
+#         avgAge: 19.7,
+#         avgDailyIncomeInUSD: 5,
+#         avgDailyIncomePopulation: 0.71
+#     },
+#     periodType: "days",
+#     timeToElapse: 58,
+#     reportedCases: 674,
+#     population: 66622705,
+#        totalHospitalBeds: 1380614
+# }
 
 @app.before_request
 def before_req():
