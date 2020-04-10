@@ -27,7 +27,7 @@ def after_req(response):
 
 @app.route('/')
 def home():
-    return "Building for SDG'S"
+    return "Hello, Word"
 
 
 @app.route('/api/v1/on-covid-19', methods=['POST'])
