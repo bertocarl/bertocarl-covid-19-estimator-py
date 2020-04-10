@@ -1,6 +1,6 @@
 from simplexml import dumps
 from flask import Flask, request, jsonify, g
-from estimator import estimator
+from .estimator import estimator
 import time
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def after_req(response):
 
 @app.route('/')
 def home():
-    return "Hello, Word"
+    return "Building for SDG Andela with Facebook"
 
 
 @app.route('/api/v1/on-covid-19', methods=['POST'])
