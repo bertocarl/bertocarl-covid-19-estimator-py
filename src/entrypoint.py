@@ -30,19 +30,19 @@ def home():
     return "Building for SDG Andela with Facebook"
 
 
-@app.route('/api/v1/on-covid-19', methods=['POST'])
+@app.route('/api/v1/on-covid-19', methods=['GET','POST'])
 def get_estimation_default():
     req_data = request.get_json()
     res = estimator(req_data)
     return jsonify(res)
 
 
-@app.route('/api/v1/on-covid-19/json', methods=['POST'])
+@app.route('/api/v1/on-covid-19/json', methods=['GET','POST'])
 def get_estimation_json():
     return get_estimation_default()
 
 
-@app.route('/api/v1/on-covid-19/xml', methods=['POST'])
+@app.route('/api/v1/on-covid-19/xml', methods=['GET','POST'])
 def get_estimation_xml():
     req_data = request.get_json()
     res = dumps({'response': estimator(req_data)})
