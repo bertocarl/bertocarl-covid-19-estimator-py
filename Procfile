@@ -1,1 +1,1 @@
-web: gunicorn
+flask db upgrade; flask translate compile; gunicorn estimator.py:app
