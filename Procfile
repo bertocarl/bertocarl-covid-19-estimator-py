@@ -1,1 +1,1 @@
-flask db upgrade; flask translate compile; gunicorn estimator.py:app
+web: python src/entrypoint.py
